@@ -3,20 +3,19 @@ import Router from 'vue-router'
 import App from '@/App';
 
 import Login from '@/components/login'
+import Login2 from '@/components/login2'
+import Root from '@/components/root'
 
 import Details from '@/components/home/details'
 
 import CheckDetail from '@/components/home/check_detail'
 
-import Rectify from '@/components/home/rectify'
-import RectifyEdit from '@/components/home/rectify_edit'
 
-import Accept from '@/components/home/accept'
+
 import Involution from '@/components/home/involution'
 import InvolutionDetail from '@/components/home/involution_detail'
 
 import Detail from '@/components/mine/detail'
-import Record from '@/components/mine/record'
 
 
 Vue.use(Router)
@@ -28,6 +27,16 @@ export default new Router({
           name: 'login',
           component: Login
       },
+      {
+        path: '/login2',
+        name: 'login2',
+        component: Login2
+    },
+    {
+      path: '/root',
+      name: 'root',
+      component: Root
+    },
     {
       path: '/home',
       component: App,
@@ -42,21 +51,6 @@ export default new Router({
           path: 'check_detail',
           name: 'check_detail',
           component: CheckDetail
-        },
-        {
-          path: 'rectify',
-          name: 'rectify',
-          component: Rectify
-        },
-        {
-          path: 'rectify_edit',
-          name: 'rectify_edit',
-          component: RectifyEdit
-        },
-        {
-          path: 'accept',
-          name: 'accept',
-          component: Accept
         },
         {
           path: 'involution',
@@ -80,11 +74,6 @@ export default new Router({
           name: 'detail',
           component: Detail
         },
-        {
-          path: 'record',
-          name: 'record',
-          component: Record
-        }
       ]
 
     }

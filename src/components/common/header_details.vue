@@ -10,6 +10,7 @@
                 </div>
                 
                 
+                
                 <!--
                 <div id="search">
                     <input type="text" class="form-control" placeholder=" 输入关键字">
@@ -38,7 +39,7 @@ export default {
 
     },
     mounted(){
-        var name = '123'
+        
     },
     methods:{
         loginOut(){

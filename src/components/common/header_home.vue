@@ -33,7 +33,7 @@
 </template>
 
 <script>
-
+import Bus from '../../bus.js'
 
 export default {
     name: 'header',
@@ -46,7 +46,9 @@ export default {
 
     },
     mounted(){
-        var name = '123'
+        Bus.$on('customEvent', (val)=>{
+            console.log(val)
+        })
     },
     methods:{
         loginOut(){

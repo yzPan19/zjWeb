@@ -100,7 +100,7 @@ export default {
     }
 
     #goDetails{
-        width:6vw;
+        width:9vw;
         height:5vh;
         border:1px solid gray;
         margin-top:5vh;

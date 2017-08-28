@@ -35,8 +35,8 @@
 <script>
 
 import vHeaderdetails from '@/components/common/header_details.vue'
-import vDetailt1 from '@/components/common/detail_table1.vue'
-import vDetailt2 from '@/components/common/detail_table2.vue'
+import vDetailt1 from '@/components/home/detail_table1.vue'
+import vDetailt2 from '@/components/home/detail_table2.vue'
 
 
 export default {

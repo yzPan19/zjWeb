@@ -8,9 +8,12 @@
                 </div>
                 <p id="inputP">在 <span id="secSpan"></span>秒后重新获取验证码&#X3000;&#X3000;&#X3000;</p>
                 <button id="subBtn" @click="submit">进入系统</button>
+                <div id="wechat">
+                    <div></div>
+                    <div @click="wechatLogin"></div>
+                </div>
                 <p id="checkText"></p>
             </div>
-
             <br>
             <br>
             <br>
@@ -21,14 +24,15 @@
 </template>
 
 <script>
-
+import Bus from '../bus'
 
 export default {
     name: 'login',
     data () {
         return {
             message:'',
-            checked: false
+            checked: false,
+            msg:'123'
         }
     },
     components: {
@@ -45,10 +49,12 @@ export default {
             }
         });
         $("#inputP").css("display","none")
-        $("#subBtn").css("margin-top","15px")
+        $("#subBtn").css("margin-top","15px")        
     },
     methods:{
         submit(){
+
+            Bus.$emit('customEvent', this.msg)
 
             var strName = $('#user').val();
             var strPass = $('#psw').val();
@@ -107,6 +113,9 @@ export default {
                     clearInterval(secTime);
                 }
             },1000);
+        },
+        wechatLogin(){
+            this.$router.push({ path: '/login2' })      
         }
     }
 }
@@ -133,11 +142,27 @@ export default {
         height:25%;
         display:flex;
         position:relative;
-        top:15%;
+        top:13%;
         align-items: center;
         flex-direction: column;
     }
-    #main2 div{
+    #main22{
+        width:20%;
+        height:20%;
+        display:flex;
+        position:relative;
+        top:8%;
+        align-items: center;
+        flex-direction: column;
+    }
+    #main22 img{
+        width:13vw;
+    }
+    #main22 p{
+        color:white;
+        margin-top:1vh;
+    }
+    #main2 #main2Div{
         width:100%;
         height:40px;
         
@@ -190,7 +215,7 @@ export default {
     
     #subBtn{
         width:75%;
-        height:17%;
+        height:25%;
         border-radius:4px;
         background-color:rgb(247,190,18);
         border:none;
@@ -198,6 +223,21 @@ export default {
         font-weight:400;
         font-size:19px;
         margin-bottom:4px;
+    }
+    #wechat{
+        width:75%;
+        height:2vw;
+        display:flex;
+        justify-content:space-between;
+    }
+    #wechat div{
+        width:2vw;
+        height:2vw;
+    }
+    #wechat div:nth-of-type(2){
+        background-image:url(../../static/img/login/wechat.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
     }
     #checkText{
         width:75%;
