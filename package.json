@@ -10,8 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-theme": "^0.7.2",
     "element-ui": "^1.4.2",
     "vue": "^2.3.3",
+    "vue-baidu-map": "^0.12.2",
     "vue-router": "^2.6.0",
     "vuex": "^2.3.1"
   },

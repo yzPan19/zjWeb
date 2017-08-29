@@ -104,6 +104,8 @@ export default {
              var secTime = setInterval(function(){
                  sec--;
                  $("#secSpan").text(sec)
+                 $("#phoneText").attr("disabled", "true");
+                 $("#phoneText").css("background-color", "gray");
                  $("#inputP").css("display","block")
                  $("#subBtn").css("margin-top","5px")
                 if(sec == 0){
@@ -145,22 +147,6 @@ export default {
         top:13%;
         align-items: center;
         flex-direction: column;
-    }
-    #main22{
-        width:20%;
-        height:20%;
-        display:flex;
-        position:relative;
-        top:8%;
-        align-items: center;
-        flex-direction: column;
-    }
-    #main22 img{
-        width:13vw;
-    }
-    #main22 p{
-        color:white;
-        margin-top:1vh;
     }
     #main2 #main2Div{
         width:100%;
@@ -215,7 +201,7 @@ export default {
     
     #subBtn{
         width:75%;
-        height:25%;
+        height:19%;
         border-radius:4px;
         background-color:rgb(247,190,18);
         border:none;

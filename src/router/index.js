@@ -17,6 +17,8 @@ import InvolutionDetail from '@/components/home/involution_detail'
 
 import Detail from '@/components/mine/detail'
 
+import Baidumap from '@/components/common/baidumap'
+
 
 Vue.use(Router)
 
@@ -31,7 +33,12 @@ export default new Router({
         path: '/login2',
         name: 'login2',
         component: Login2
-    },
+      },
+      {
+        path: '/baidumap',
+        name: 'baidumap',
+        component: Baidumap
+      },
     {
       path: '/root',
       name: 'root',
