@@ -1,5 +1,6 @@
 <template>
   <baidu-map :center="center" @ready="handler"></baidu-map>
+  <div></div>
 </template>
 <script>
 export default {
